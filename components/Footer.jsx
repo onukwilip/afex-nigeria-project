@@ -16,8 +16,8 @@ const Footer = () => {
       <Button secondary className={css.button}>
         Live Market
       </Button>
-      {items.map((eachItem) => (
-        <div className={css.item}>
+      {items.map((eachItem, i) => (
+        <div className={css.item} key={i}>
           <em>{eachItem.name}</em>
           <em>{eachItem.price}</em>
         </div>

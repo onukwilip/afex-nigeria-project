@@ -5,8 +5,10 @@ const Options = (props) => {
   return (
     <div className={css.options}>
       <em>{props.title}</em>
-      {props.menus?.map((eachItem) => (
-        <em className={css.item}>{eachItem}</em>
+      {props.menus?.map((eachItem, i) => (
+        <em className={css.item} key={i}>
+          {eachItem}
+        </em>
       ))}
     </div>
   );

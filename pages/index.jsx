@@ -230,8 +230,8 @@ export default function Home() {
 
                   <Table.Body>
                     {clientPositions.length > 0 ? (
-                      clientPositions.map((eachclient) => (
-                        <Table.Row>
+                      clientPositions.map((eachclient, key) => (
+                        <Table.Row key={key}>
                           <Table.Cell>{eachclient?.commodity_name}</Table.Cell>
                           <Table.Cell>{eachclient?.available_units}</Table.Cell>
                           <Table.Cell>
@@ -263,8 +263,8 @@ export default function Home() {
 
                   <Table.Body>
                     {clientPositions.length > 0 ? (
-                      clientPositions.map((eachclient) => (
-                        <Table.Row>
+                      clientPositions.map((eachclient, key) => (
+                        <Table.Row key={key}>
                           <Table.Cell>{eachclient?.commodity_name}</Table.Cell>
                           <Table.Cell>{eachclient?.available_units}</Table.Cell>
                           <Table.Cell>
@@ -288,7 +288,7 @@ export default function Home() {
                   <Table.Header>
                     <Table.Row>
                       {orderBook.length > 0 &&
-                        getTable3Heads().map((eachHead) => {
+                        getTable3Heads().map((eachHead, key) => {
                           if (
                             typeof eachHead === "object" ||
                             Array.isArray(eachHead)
@@ -297,7 +297,7 @@ export default function Home() {
                           }
 
                           return (
-                            <Table.Cell>
+                            <Table.Cell key={key}>
                               <b>{eachHead}</b>
                             </Table.Cell>
                           );
@@ -307,8 +307,8 @@ export default function Home() {
 
                   <Table.Body>
                     {orderBook.length > 0 ? (
-                      orderBook.map((eachItem) => (
-                        <Table.Row>
+                      orderBook.map((eachItem, key) => (
+                        <Table.Row key={key}>
                           {getTable3Cells(eachItem).map((eachCell) => (
                             <Table.Cell>{eachCell}</Table.Cell>
                           ))}
