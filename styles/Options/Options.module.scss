@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.options {
+  @include flex(center, flex-start, $big-spacing, row);
+  .item {
+    padding: $spacing $big-spacing;
+    border-radius: $big-spacing;
+    cursor: pointer;
+    background-color: $primary-gray;
+    &:hover {
+      background-color: red;
+      color: white;
+    }
+    &:nth-of-type(2) {
+      background-color: red;
+      color: white;
+    }
+  }
+  em {
+    font-weight: bold;
+  }
+}

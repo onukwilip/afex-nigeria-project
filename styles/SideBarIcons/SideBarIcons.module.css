@@ -1,0 +1,15 @@
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  flex-direction: column;
+  margin: 1rem;
+  cursor: pointer;
+}
+.icon-container i {
+  transform: scale(1.5);
+}
+.icon-container:hover {
+  color: red;
+}/*# sourceMappingURL=SideBarIcons.module.css.map */

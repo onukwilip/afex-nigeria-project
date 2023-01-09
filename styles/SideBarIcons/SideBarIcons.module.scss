@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.icon-container {
+  @include flex(center, center, $spacing, column);
+  margin: $big-spacing;
+  cursor: pointer;
+
+  i {
+    transform: scale(1.5);
+  }
+  &:hover {
+    color: red;
+  }
+}

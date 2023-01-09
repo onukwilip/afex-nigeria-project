@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.tag {
+  text-align: justify;
+  em {
+    display: block;
+  }
+  em:first-child {
+    font-weight: bold;
+    font-size: 10px;
+    color: lightgray;
+    margin-bottom: 2px;
+  }
+  em:last-child {
+    font-weight: bold;
+  }
+}

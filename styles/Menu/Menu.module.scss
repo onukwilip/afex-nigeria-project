@@ -1,0 +1,23 @@
+@import "../variables.scss";
+
+.menu {
+  padding: $spacing;
+  border-radius: $spacing;
+  @include flex(center, flex-start, 0, column);
+}
+.input {
+  margin-bottom: $big-spacing;
+  width: 100%;
+  background-color: $primary-gray;
+}
+.menu-item {
+  width: 100%;
+  padding: $big-spacing;
+  @include flex(start, flex-start, $spacing, row);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-gray;
+    color: red;
+  }
+}

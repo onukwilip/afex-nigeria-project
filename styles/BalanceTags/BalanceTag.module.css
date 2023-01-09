@@ -1,0 +1,15 @@
+.tag {
+  text-align: justify;
+}
+.tag em {
+  display: block;
+}
+.tag em:first-child {
+  font-weight: bold;
+  font-size: 10px;
+  color: lightgray;
+  margin-bottom: 2px;
+}
+.tag em:last-child {
+  font-weight: bold;
+}/*# sourceMappingURL=BalanceTag.module.css.map */

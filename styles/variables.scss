@@ -1,0 +1,13 @@
+@mixin flex($ai, $jc, $gap, $fd) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  gap: $gap;
+  flex-direction: $fd;
+}
+
+$spacing: 0.3rem;
+$big-spacing: 1rem;
+$bg-color-light: #fff;
+$primary-gray: rgba(lightgray, 0.3);
+$btn-dark: #000;

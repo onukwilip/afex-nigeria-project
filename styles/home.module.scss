@@ -1,0 +1,160 @@
+@import "./variables.scss";
+.main {
+  @include flex(center, center, 0, column);
+  height: 100vh;
+  width: 100vw;
+  background-color: $primary-gray;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    width: 90%;
+    div {
+      background-color: $bg-color-light;
+    }
+    .header {
+      grid-column: 1/19;
+      display: grid;
+      grid-template-columns: 3fr 2fr 1fr;
+      background-color: transparent;
+      gap: 1px;
+      .logo {
+        @include flex(center, space-between, 0, row);
+        padding: 0 $big-spacing;
+        .img-container {
+          img {
+            width: 100px;
+            height: auto;
+          }
+        }
+        .toogle {
+          border: 1px solid black;
+          border-radius: 15px;
+          padding: $spacing;
+          cursor: pointer;
+        }
+      }
+      .prices {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+      }
+      .action {
+        padding: $spacing;
+        @include flex(center, flex-end, 5px, row);
+      }
+    }
+    .sidebar {
+      grid-column: 1/2;
+      @include flex(center, flex-start, 0, column);
+    }
+    .footer {
+      grid-column: 1/19;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .content {
+      grid-column: 2/19;
+      height: 80vh;
+      padding: $spacing;
+      background-color: transparent;
+
+      @include flex(stretch, start, $spacing, row);
+      .menus {
+        flex: 2;
+        background: transparent;
+      }
+      .tables {
+        flex: 8;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-rows: repeat(14, 1fr);
+        background-color: transparent;
+        gap: $spacing;
+        .options {
+          grid-column: 1/3;
+          grid-row: 1/3;
+          display: grid;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .options-1 {
+            overflow-x: auto;
+            display: grid;
+            padding: 0 $big-spacing;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          .options-2 {
+            overflow-x: auto;
+            display: grid;
+            padding: 0 $big-spacing;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+        }
+
+        .table-1 {
+          grid-row: 3/9;
+          overflow-x: auto;
+          overflow-y: auto;
+        }
+        .table-2 {
+          grid-row: 3/9;
+          overflow-x: auto;
+          overflow-y: auto;
+        }
+        .table-3 {
+          grid-row: 9/15;
+          grid-column: 1/3;
+          overflow-x: auto;
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  .main {
+    .grid {
+      .header {
+        .logo {
+          grid-column: 1/4;
+        }
+        .action {
+          display: none;
+        }
+        .prices {
+          display: none;
+        }
+      }
+      .sidebar {
+        display: none;
+      }
+      .content {
+        grid-column: 1/19;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    .grid {
+      .content {
+        grid-column: 1/19;
+        .menus {
+          display: none;
+        }
+      }
+    }
+  }
+}

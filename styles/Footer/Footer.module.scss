@@ -1,0 +1,12 @@
+@import "../variables.scss";
+.footer {
+  @include flex(center, flex-start, 0, row);
+}
+.item {
+  padding: $spacing $big-spacing + 5px;
+
+  em {
+    display: block;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.dark {
+  background-color: $btn-dark;
+  color: $bg-color-light;
+  border-radius: 0px;
+  padding: $spacing;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.success {
+}
+.danger {
+}

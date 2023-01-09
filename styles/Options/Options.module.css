@@ -1,0 +1,24 @@
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-direction: row;
+}
+.options .item {
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: rgba(211, 211, 211, 0.3);
+}
+.options .item:hover {
+  background-color: red;
+  color: white;
+}
+.options .item:nth-of-type(2) {
+  background-color: red;
+  color: white;
+}
+.options em {
+  font-weight: bold;
+}/*# sourceMappingURL=Options.module.css.map */
